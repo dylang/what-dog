@@ -1,0 +1,35 @@
+{
+  "name": "what-dog",
+  "version": "1.0.0",
+  "description": "Get the breed of a dog from an image using Microsoft's what-dog.",
+  "license": "MIT",
+  "repository": "dylang/what-dog",
+  "author": {
+    "name": "Dylan Greene",
+    "email": "dylang@gmail.com",
+    "url": "github.com/dylang"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "dog", "puppy", "breed", "ai", "what-dog", "whatdog"
+  ],
+  "dependencies": {
+    "got": "^6.3.0",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "xo": "^0.14.0"
+  },
+  "xo": {
+    "space": 4
+  }
+}
