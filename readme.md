@@ -7,9 +7,9 @@
 |
 ```json
 {
-  isDog: true,
-  breed: 'Norfolk Terrier',
-  about: 'Spirited, small but sturdy, feisty yet sweet personality'
+  "isDog": true,
+  "breed": "Norfolk Terrier",
+  "about": "Spirited, small but sturdy, feisty yet sweet personality"
 }
 ```
 |
@@ -41,15 +41,17 @@ whatDot('http://imgur.com/B7a15F5.jpg');
 
 ## API
 
-### whatDot(imageUrl)
+### `whatDot(imageUrl)`
 
-#### imageUrl
+#### `imageUrl`
 
 Type: `string`
 
 Url to the image. Must be on a public server that Microsoft's servers can download to determine the caption.
 
-Returns a promise for the doggy data.
+Returns a promise for the `doggy data`.
+
+#### `doggy data`
 
 ```
 {
