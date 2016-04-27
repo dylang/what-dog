@@ -1,6 +1,6 @@
 {
   "name": "what-dog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get the breed of a dog from an image using Microsoft's what-dog.",
   "license": "MIT",
   "repository": "dylang/what-dog",

@@ -2,9 +2,8 @@
 
 > Get the breed of a dog from an image using Microsoft's what-dog.
 
-| <img src="http://imgur.com/B7a15F5.jpg" width="300px"> |
-|--------------------------------------|
-|
+<img src="http://imgur.com/B7a15F5.jpg" width="300px">
+
 ```json
 {
   "isDog": true,
@@ -12,7 +11,6 @@
   "about": "Spirited, small but sturdy, feisty yet sweet personality"
 }
 ```
-|
 
 ## Install
 
