@@ -21,5 +21,5 @@ test('no url', async t => {
 
 test('non-image url', async t => {
     const result = await t.throws(whatdog('http://microsoft.com/'));
-    t.is(result.message, `ParseError: Unexpected token < in \"https://www.what-dog.net/Home/Analyze\": \n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/T...`);
+    t.regex(result.message, /ParseError.*/);
 });
