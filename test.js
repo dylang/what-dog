@@ -8,6 +8,17 @@ test('image', async t => {
     t.is(result.about, `Spirited, small but sturdy, feisty yet sweet personality`);
 });
 
+test.cb('image using caption', t => {
+    t.plan(4);
+    whatdog('http://imgur.com/B7a15F5.jpg', (err, result) => {
+        t.falsy(err);
+        t.is(result.isDog, true);
+        t.is(result.breed, `Norfolk Terrier`);
+        t.is(result.about, `Spirited, small but sturdy, feisty yet sweet personality`);
+        t.end();
+    });
+});
+
 test('no url', async t => {
     const result1 = await t.throws(whatdog());
     t.is(result1.message, 'A valid url is required.');
