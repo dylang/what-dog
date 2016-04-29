@@ -17,12 +17,20 @@ function whatDog(imageUrl) {
         },
         json: true
     }).then(response => {
-        const whatDog = JSON.parse(response.body);
-        return {
-            isDog: whatDog.IsDog,
-            breed: whatDog.BreedName,
-            about: whatDog.Keywords
-        };
+        try {
+            const whatDog = JSON.parse(response.body);
+            return {
+                isDog: whatDog.IsDog,
+                breed: whatDog.BreedName,
+                about: whatDog.Keywords
+            };
+        } catch (err) {
+            return {
+                isDog: false,
+                breed: 'Not a dog',
+                about: ''
+            };
+        }
     }).catch(err => {
         throw new Error(err);
     });
