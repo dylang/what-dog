@@ -30,7 +30,7 @@ test('no url', async t => {
     t.is(result3.message, 'A valid url is required.');
 });
 
-test('non-image url', async t => {
-    const result = await t.throws(whatdog('http://microsoft.com/'));
-    t.regex(result.message, /ParseError.*/);
+test('non-dod url', async t => {
+    const result = await whatdog('http://microsoft.com/');
+    t.is(result.isDog, false);
 });

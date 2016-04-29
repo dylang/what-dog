@@ -14,11 +14,11 @@ function whatDog(imageUrl) {
             version: '001',
             faceUrl: imageUrl,
             faceName: imageUrl
-        },
-        json: true
+        }
     }).then(response => {
         try {
-            const whatDog = JSON.parse(response.body);
+            // Silly Microsoft double-JSON encoded their output?!
+            const whatDog = JSON.parse(JSON.parse(response.body));
             return {
                 isDog: whatDog.IsDog,
                 breed: whatDog.BreedName,
@@ -28,11 +28,17 @@ function whatDog(imageUrl) {
             return {
                 isDog: false,
                 breed: 'Not a dog',
-                about: ''
+                about: '',
+                err: err
             };
         }
     }).catch(err => {
-        throw new Error(err);
+        return {
+            isDog: false,
+            breed: 'Not a dog',
+            about: '',
+            err: err
+        };
     });
 }
 
