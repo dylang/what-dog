@@ -1,6 +1,6 @@
 # what-dog [![Build Status](https://travis-ci.org/dylang/what-dog.svg?branch=master)](https://travis-ci.org/dylang/what-dog)
 
-> Get the breed of a dog from an image using Microsoft's what-dog.
+> Get the breed of a dog from an image using Microsoft's [what-dog](https://www.what-dog.net/).
 
 <img src="http://imgur.com/B7a15F5.jpg" width="300px">
 
@@ -24,22 +24,24 @@ $ npm install --save what-dog
 ```js
 const whatDog = require('what-dog');
 
-whatDot('http://imgur.com/B7a15F5.jpg');
+whatDog('http://imgur.com/B7a15F5.jpg');
     .then(doggyData => {
         console.log(doggyData);
     })
 
-//=> {
-       isDog: true,
-       breed: 'Norfolk Terrier',
-       about: 'Spirited, small but sturdy, feisty yet sweet personality'
-     }
+/* returns a json object like so
+{
+   isDog: true,
+   breed: 'Norfolk Terrier',
+   about: 'Spirited, small but sturdy, feisty yet sweet personality'
+}
+*/
 ```
 
 
 ## API
 
-### `whatDot(imageUrl)`
+### `whatDog(imageUrl)`
 
 #### `imageUrl`
 
@@ -47,9 +49,9 @@ Type: `string`
 
 Url to the image. Must be on a public server that Microsoft's servers can download to determine the caption.
 
-Returns a promise for the `doggy data`.
+Returns a promise for the `doggyData`.
 
-#### `doggy data`
+#### `doggyData`
 
 ```
 {
