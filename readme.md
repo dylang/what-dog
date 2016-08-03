@@ -24,16 +24,18 @@ $ npm install --save what-dog
 ```js
 const whatDog = require('what-dog');
 
-whatDot('http://imgur.com/B7a15F5.jpg');
+whatDog('http://imgur.com/B7a15F5.jpg');
     .then(doggyData => {
         console.log(doggyData);
     })
 
-//=> {
-       isDog: true,
-       breed: 'Norfolk Terrier',
-       about: 'Spirited, small but sturdy, feisty yet sweet personality'
-     }
+/* returns a json object like so
+{
+   isDog: true,
+   breed: 'Norfolk Terrier',
+   about: 'Spirited, small but sturdy, feisty yet sweet personality'
+}
+*/
 ```
 
 
