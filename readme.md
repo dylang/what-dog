@@ -1,6 +1,6 @@
 # what-dog [![Build Status](https://travis-ci.org/dylang/what-dog.svg?branch=master)](https://travis-ci.org/dylang/what-dog)
 
-> Get the breed of a dog from an image using Microsoft's what-dog.
+> Get the breed of a dog from an image using Microsoft's [what-dog](https://www.what-dog.net/).
 
 <img src="http://imgur.com/B7a15F5.jpg" width="300px">
 
