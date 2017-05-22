@@ -24,7 +24,7 @@ $ npm install --save what-dog
 ```js
 const whatDog = require('what-dog');
 
-whatDot('http://imgur.com/B7a15F5.jpg');
+whatDog('http://imgur.com/B7a15F5.jpg');
     .then(doggyData => {
         console.log(doggyData);
     })
@@ -39,7 +39,7 @@ whatDot('http://imgur.com/B7a15F5.jpg');
 
 ## API
 
-### `whatDot(imageUrl)`
+### `whatDog(imageUrl)`
 
 #### `imageUrl`
 
